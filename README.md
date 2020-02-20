@@ -3,6 +3,10 @@
 Epoch Debug Monitor (RscTitle)
 
 
+![https://epochmod.com/forum/forum/1-arma-2/](http://puu.sh/FcyvV/d4766884bf.jpg)
+
+
+
 ### Prerequisites
 
 ```
