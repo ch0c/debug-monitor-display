@@ -1,4 +1,4 @@
-﻿class Debug_BG	{
+class Debug_BG	{
 	access = 0;
 	type = 0;
 	idc = -1;
@@ -37,28 +37,33 @@ class Debug_Text	{
 };
 //---------------------------------------------------------------//
 class DEBUG	{
-		idd = -1;
-		fadeout = 1;
-		fadein =1;
-		duration = 10e10;
-		name= "DEBUGDISPLAY";
-		onLoad = "uiNamespace setVariable ['DEBUGDISPLAY', _this select 0]";
+	idd = -1;
+	fadeout = 1;
+	fadein =1;
+	duration = 10e10;
+	name= "DEBUGDISPLAY";
+	onLoad = "uiNamespace setVariable ['DEBUGDISPLAY', _this select 0]";
 	class controlsBackground	{
-			class Debug_BG_DEBUGDISPLAY: Debug_BG	{
-				idc = -1;
-				x = 0.860750 * safezoneW + safezoneX;	
-				y = 0.061481 * safezoneH + safezoneY;		
-				w = 0.120666 * safezoneW;						
-				h = 0.268370 * safezoneH;				
-				colorBackground[] = {0,0,0,0.3};
-			};
-			class Debug_Text_DEBUGDISPLAY:Debug_Text 	{
-				idc = 9000;
-				x = 0.860750 * safezoneW + safezoneX;		
-				y = 0.061481 * safezoneH + safezoneY;		
-				w = 0.120666 * safezoneW;						
-				h = 0.348370 * safezoneH;								
-				colorBackground[] = {0,0,0,0};
-			};
+		class Debug_BG_DEBUGDISPLAY: Debug_BG	{
+			idc = -1;
+			x = 0.860750 * safezoneW + safezoneX;		// x = 0.860750	
+			y = 0.061481 * safezoneH + safezoneY;			// y = 0.051481
+			w = 0.120666 * safezoneW;								// w = 0.120666
+			h = 0.348370 * safezoneH;								// h = 0.298370
+			//w = 0.146666 * safezoneW;
+			//h = 0.300370 * safezoneH;
+			colorBackground[] = {0,0,0,0.5};
 		};
-	};	
+		class Debug_Text_DEBUGDISPLAY:Debug_Text 	{
+			idc = 9000;
+			x = 0.860750 * safezoneW + safezoneX;		// x = 0.860750	
+			y = 0.061481 * safezoneH + safezoneY;			// y = 0.051481	
+			w = 0.120666 * safezoneW;								// w = 0.120666
+			h = 0.348370 * safezoneH;								// h = 0.298370				
+			//w = 0.134666 * safezoneW;
+			//h = 0.306666 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+		};
+	};
+};	
+
