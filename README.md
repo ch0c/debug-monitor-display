@@ -3,7 +3,8 @@
 Epoch Debug Monitor (RscTitle)
 
 
-http://puu.sh/H8GOm/f0cbc27956.png
+![GitHub Logo](http://puu.sh/H8GOm/f0cbc27956.png)
+
 
 
 ### Prerequisites
