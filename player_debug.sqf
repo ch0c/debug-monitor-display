@@ -4,7 +4,7 @@ disableSerialization;
 	_display = uiNameSpace getVariable "DEBUGDISPLAY";
 	_stats = _display displayCtrl 9000;
 //--------------------------------------------------------------------------------------------//
-	_servername = "YOURSERVERNAME";
+	_servername = "DTA Overpoch";
 	_spacer = "------------------------------------------";
 	_symbol = "°";
 //--------------------------------------------------------------------------------------------//
@@ -12,7 +12,13 @@ while {1 == 1} do {
 	_nearestCity = nearestLocations [getPos player, ["NameCityCapital","NameCity","NameVillage","NameLocal"],800];
 	_textCity = "Wilderness";
 	if (count _nearestCity > 0) then {_textCity = text (_nearestCity select 0)};
-	_time = (round(120-(serverTime)/60));
+	_img = (getText (configFile >> 'CfgVehicles' >> (typeOf vehicle player) >> 'picture'));
+if(player == vehicle player)then{
+	_img = (getText (configFile >> 'CfgWeapons' >> (currentWeapon player) >> 'picture'));
+	}else{
+	_img = (getText (configFile >> 'CfgVehicles' >> (typeOf vehicle player) >> 'picture'));	
+	};
+	_time = (round(150-(serverTime)/60));
 	_hours = (floor(_time/60));
 	_minutes = (_time - (_hours * 60));
 	switch(_minutes) do	{
@@ -74,11 +80,12 @@ while {1 == 1} do {
 /*-----------*/	_DebugText = _DebugText + format ["<t size='1' font='Zeppelin33' align='left' color='#CCCCCC'>%1</t><br/>", _spacer];
 	_DebugText = _DebugText + format ["<t size='1' font='Zeppelin33' align='left' color='#8CFA16'>%1</t>", _textcity];
 	_DebugText = _DebugText + format ["<t size='1.1' font='Zeppelin33' align='right' color='#8CFA16'>%1%2 %3</t><br/>", round (getDir vehicle player),_symbol, _dir];
+	_DebugText = _DebugText + format ["<img size='4' align='center'  image='%1' /><br/>", _img];
 	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='left' color='#8CFA16'>GPS: </t><t size='1.2' font='Zeppelin33' align='left' color='#FFFFFF'>%1 </t>", (mapGridPosition getPos player)];
 	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='right' color='#8CFA16'>FPS: </t><t size='1.2' font='Zeppelin33' align='right' color='#FFFFFF'>%1</t><br/>", round diag_fps];
 /*-----------*/	_DebugText = _DebugText + format ["<t size='1' font='Zeppelin33' align='left' color='#CCCCCC'>%1</t><br/>", _spacer];
-	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='left' color='#D0F000'>Coins: </t><t size='1.2' font='Zeppelin33' align='right' color='#FFFFFF'>%1</t><br/>", [player getVariable["cashMoney",0]] call BIS_fnc_numberText];
-	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='left' color='#D0F000'>Bank: </t><t size='1.2' font='Zeppelin33' align='right' color='#FFFFFF'>%1</t><br/>", [player getVariable["bankMoney",0]] call BIS_fnc_numberText]; 
+	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='left' color='#D0F000'>Coins: </t><t size='1.2' font='Zeppelin33' align='right' color='#FFFFFF'>%1</t><br/>", [player getVariable[Z_moneyVariable,0]] call zupa_numberText];
+	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='left' color='#D0F000'>Bank: </t><t size='1.2' font='Zeppelin33' align='right' color='#FFFFFF'>%1</t><br/>", [player getVariable[Z_bankVariable,0]] call zupa_numberText]; 
 /*-----------*/	_DebugText = _DebugText + format ["<t size='1' font='Zeppelin33' align='left' color='#CCCCCC'>%1</t><br/>", _spacer];
 	_DebugText = _DebugText + format ["<t size='1.1' font='Zeppelin33' align='center' color='#D9FF00'>Restart in: </t><t size='1.2' font='Zeppelin33' align='center' color='#FFFFFF'>%1:%2</t><br/>", _hours, _minutes];
 
