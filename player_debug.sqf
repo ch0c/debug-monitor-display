@@ -84,8 +84,8 @@ if(player == vehicle player)then{
 	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='left' color='#8CFA16'>GPS: </t><t size='1.2' font='Zeppelin33' align='left' color='#FFFFFF'>%1 </t>", (mapGridPosition getPos player)];
 	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='right' color='#8CFA16'>FPS: </t><t size='1.2' font='Zeppelin33' align='right' color='#FFFFFF'>%1</t><br/>", round diag_fps];
 /*-----------*/	_DebugText = _DebugText + format ["<t size='1' font='Zeppelin33' align='left' color='#CCCCCC'>%1</t><br/>", _spacer];
-	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='left' color='#D0F000'>Coins: </t><t size='1.2' font='Zeppelin33' align='right' color='#FFFFFF'>%1</t><br/>", [player getVariable[Z_moneyVariable,0]] call zupa_numberText];
-	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='left' color='#D0F000'>Bank: </t><t size='1.2' font='Zeppelin33' align='right' color='#FFFFFF'>%1</t><br/>", [player getVariable[Z_bankVariable,0]] call zupa_numberText]; 
+	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='left' color='#D0F000'>Coins: </t><t size='1.2' font='Zeppelin33' align='right' color='#FFFFFF'>%1</t><br/>", [player getVariable["cashMoney",0]] call zupa_numberText];
+	_DebugText = _DebugText + format ["<t size='1.2' font='Zeppelin33' align='left' color='#D0F000'>Bank: </t><t size='1.2' font='Zeppelin33' align='right' color='#FFFFFF'>%1</t><br/>", [player getVariable["bankhMoney",0]] call zupa_numberText]; 
 /*-----------*/	_DebugText = _DebugText + format ["<t size='1' font='Zeppelin33' align='left' color='#CCCCCC'>%1</t><br/>", _spacer];
 	_DebugText = _DebugText + format ["<t size='1.1' font='Zeppelin33' align='center' color='#D9FF00'>Restart in: </t><t size='1.2' font='Zeppelin33' align='center' color='#FFFFFF'>%1:%2</t><br/>", _hours, _minutes];
 
