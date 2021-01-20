@@ -4,7 +4,7 @@ Epoch Debug Monitor (RscTitle)
 
 
 ![https://epochmod.com/forum/forum/1-arma-2/](http://puu.sh/FcyvV/d4766884bf.jpg)
-
+http://puu.sh/H8GOm/f0cbc27956.png
 
 
 ### Prerequisites
