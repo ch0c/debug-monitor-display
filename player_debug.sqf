@@ -4,7 +4,7 @@ disableSerialization;
 	_display = uiNameSpace getVariable "DEBUGDISPLAY";
 	_stats = _display displayCtrl 9000;
 //--------------------------------------------------------------------------------------------//
-	_servername = "DTA Overpoch";
+	_servername = "Dayz Epoch";
 	_spacer = "------------------------------------------";
 	_symbol = "°";
 //--------------------------------------------------------------------------------------------//
