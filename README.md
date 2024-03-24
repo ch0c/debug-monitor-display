@@ -21,13 +21,19 @@ a custom compliles.sqf and keyboard.sqf
 In your **description.ext** find
 
 ```
-class RscTitles {
+#include "\z\addons\dayz_code\gui\description.hpp"
 ```
 
-below that paste
+Replace that with
 
 ```
-#include "PATH_TO_YOUR\debug.hpp" 
+
+	#include "PATH_TO_YOUR\description.hpp"
+
+	class RscTitles {
+		#include "PATH_TO_YOUR\watermark.hpp"
+		#include "PATH_TO_YOUR\debug.hpp" 
+	};
 ```
 
 Save and close.
