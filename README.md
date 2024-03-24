@@ -3,9 +3,7 @@
 Epoch Debug Monitor (RscTitle)
 
 
-![Screenshot]([http://puu.sh/H8GOm/f0cbc27956.png](https://i.imgur.com/4fVoCJm.png))
-
-
+![screenshot](https://i.imgur.com/4fVoCJm.png)
 
 ### Prerequisites
 
